@@ -1,0 +1,12 @@
+{
+  "name": "everybody-codes",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Konrad Romanowski",
+  "type": "module",
+  "dependencies": {
+    "@datastructures-js/heap": "^4.3.7",
+    "@datastructures-js/priority-queue": "^6.4.0",
+    "@datastructures-js/queue": "^4.3.0"
+  }
+}
