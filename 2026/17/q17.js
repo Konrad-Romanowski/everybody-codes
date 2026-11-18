@@ -34,3 +34,24 @@ while(pq.size()) {
 }
 
 console.log(`p1: ${p1}`);
+
+
+// part 2
+const p2Map = fs.readFileSync('p2.in','utf-8').split("\r\n");
+const P2_ROWS = p2Map.length;
+const P2_COLS = p2Map[0].length;
+
+let p2 = 0;
+
+for(let r = 0; r < P2_ROWS; r++) {
+    for(let c = 0; c < P2_COLS; c++) {
+        if(p2Map[r][c] !== "#") continue;
+
+        if(r-1 < 0 || p2Map[r-1][c] === ".") p2++;
+        if(P2_ROWS <= r+1 || p2Map[r+1][c] === ".") p2++;
+        if(c-1 < 0 || p2Map[r][c-1] === ".") p2++;
+        if(P2_COLS <= c+1 || p2Map[r][c+1] === ".") p2++;
+    }
+}
+
+console.log(`p2: ${p2}`);
